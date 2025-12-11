@@ -10,7 +10,10 @@ dotenv.config();
 connectDB();
 
 app.use(cors({
-    origin: "https://eliteestate00.netlify.app"
+    origin: "https://eliteestate00.netlify.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
 }
 ));
 app.use(express.json());
