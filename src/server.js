@@ -10,9 +10,9 @@ dotenv.config();
 connectDB();
 
 app.use(cors({
-    "origin": "https://eliteestate00.netlify.app"
+    origin: "https://eliteestate00.netlify.app"
 }
-))
+));
 app.use(express.json());
 
 app.use('/api/auth', router);
